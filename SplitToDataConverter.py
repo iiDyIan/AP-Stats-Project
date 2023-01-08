@@ -1,16 +1,11 @@
 from netCDF4 import Dataset
-import numpy
 import os
-import math
 import csv
 import sys
-import pandas as pd
-
-import sys
-import csv
-maxInt = sys.maxsize
 
 # gross code but neccessary to stop weird error
+
+maxInt = sys.maxsize
 while True:
     try:
         csv.field_size_limit(maxInt)
@@ -65,7 +60,6 @@ for parameter in parametersOfInterest:
                         mainData = mainData.replace('[', "")
                         mainData = mainData.replace(']', "")
                         res = [float(idx) for idx in mainData.split(', ')]
-                        #print(len(res))
                         parameterOutput += res
                         
 
